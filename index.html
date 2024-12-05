@@ -10,14 +10,27 @@
   </head>
   <body>
     <div id="app">
-      <h1>{{ product }}</h1>
+      <div class="nav-bar"></div>
+      
+      <div class="product-display">
+        <div class="product-container">
+          <div class="product-image">
+            <img v-bind:src="image">
+          </div>
+          <div class="product-info">
+            <h1>{{ product }}</h1>
+            <a :href="url">Test url</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Import Js -->
+    <!-- Import App -->
     <script src="./main.js"></script>
 
+    <!-- Mount App -->
     <script>
-        const mountedApp = app.mount('#app')
+      const mountedApp = app.mount('#app')
     </script>
   </body>
 </html>
